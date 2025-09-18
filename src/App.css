@@ -1,18 +1,15 @@
-.searchbox-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* Header component */
 
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 0 5rem;
+	margin: 1rem;
 }
 
 .left-side-header {
 	display: flex;
+    align-items: center;
 }
 
 #logo-header {
@@ -24,24 +21,29 @@ header {
 	font-size: 24px;
 }
 
-@media (max-width: 500px) {
-	header {
-		margin: 0 1rem;
-	}
-}
-
 main {
 	display: flex;
+    flex-direction: column;
 	align-items: center;
 	justify-content: center;
+    margin: 0 2rem;
+}
+
+/* SearchBox component */
+
+.searchbox-container{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .search-container {
     width: 100%;
 	display: flex;
-    gap: 1.5rem;
-    justify-content:space-around;
     margin-top: 3rem;
+    flex-direction: column;
+    gap: 1rem;
     align-items: stretch;
 }
 
@@ -50,7 +52,7 @@ main {
     padding: 5px 0.5rem;
 	align-items: center;
     flex: 1;
-    border-radius: 16px;
+    border-radius: 15px;
     background-color: rgba(112, 112, 112, 0.466);
 }
 
@@ -62,7 +64,6 @@ main {
     border: none;
     outline: none;
     flex: 1;
-    width: 300px;
     background: transparent;
     font-size: 18px;
     margin-left: .5rem;
@@ -78,10 +79,10 @@ h1{
 }
 
 .search-container button{
-    padding: 0 15px;
+    padding: 13px;
     background-color: rgb(60, 57, 238);
     border: 0;
-    border-radius: 10px;
+    border-radius: 15px;
     flex: 0;
     font-size: 16px;
 }
@@ -91,16 +92,52 @@ h1{
     cursor: pointer;
 }
 
-@media (max-width: 500px){
-    .search-container{
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1rem;
+/* CityCard comp */
+
+.citycard-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem;
+    border-radius: 15px;
+    background-color: rgb(65, 65, 209);
+}
+
+.citycard-container .city-date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem 0 0;
+}
+
+.city-date h2{
+    font-size: 30px;
+    margin: 0.8rem;
+}
+
+.citycard-container .temp{
+    display: flex;
+    justify-content:space-evenly;
+    margin: 3rem 0;
+}
+
+.temp img {
+    width: 40px;
+}
+
+.temp p{
+    font-size: 60px;
+}
+
+@media (min-width: 500px){
+
+    .searchbox-container{
         align-items: stretch;
-        max-width: 300px;
+        width: 100%;
+        max-width: 800px;
     }
 
-    .search-container button{
-        padding: 13px;
+    .search-container{
+        flex-direction: row;
     }
 }
